@@ -22,6 +22,9 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
+import Table from '@ckeditor/ckeditor5-table/src/table';
+import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 
 import { CustomPlugin } from './customPlugin';
 
@@ -47,23 +50,28 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	CustomPlugin,
+	Table,
+	TableToolbar,
+	Font
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
+			'insertTable',
 			'heading',
 			'|',
 			'bold',
 			'italic',
 			'underline',
+			'fontColor',
 			'link',
 			'bulletedList',
 			'numberedList',
 			'insertImage',
 			'undo',
-			'redo',
+			'redo'
 		]
 	},
 	image: {
