@@ -26,6 +26,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Font from "@ckeditor/ckeditor5-font/src/font";
 import ImageUpload from "@ckeditor/ckeditor5-image/src/imageupload";
+import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 
 import { CustomPlugin } from './customPlugin';
 
@@ -40,6 +41,7 @@ ClassicEditor.builtinPlugins = [
 	Bold,
 	Italic,
 	Underline,
+	CloudServices,
 	EasyImage,
 	ImageUpload,
 	Heading,
