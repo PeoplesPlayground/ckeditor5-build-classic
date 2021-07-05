@@ -70,6 +70,7 @@ ClassicEditor.defaultConfig = {
 			'italic',
 			'underline',
 			'fontColor',
+			'fontBackgroundColor',
 			'link',
 			'bulletedList',
 			'numberedList',
