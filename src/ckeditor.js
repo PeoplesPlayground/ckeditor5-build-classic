@@ -28,9 +28,6 @@ import Font from "@ckeditor/ckeditor5-font/src/font";
 import ImageUpload from "@ckeditor/ckeditor5-image/src/imageupload";
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 import ImageResize from "@ckeditor/ckeditor5-image/src/imageresize";
-import LinkImage from "@ckeditor/ckeditor5-link/src/linkimage";
-import ImageInsert from "@ckeditor/ckeditor5-image/src/imageinsert";
-import ImageTextAlternative from "@ckeditor/ckeditor5-image/src/imagetextalternative";
 
 import { CustomPlugin } from './customPlugin';
 
@@ -61,10 +58,7 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	Font,
-	ImageResize,
-	LinkImage,
-	ImageInsert,
-	ImageTextAlternative,
+	ImageResize
 ];
 
 // Editor configuration.
@@ -89,14 +83,10 @@ ClassicEditor.defaultConfig = {
 	},
 	image: {
 		toolbar: [
-			'imageStyle:inline',
-			'imageStyle:block',
+			'imageStyle:full',
 			'imageStyle:side',
 			'|',
-			'toggleImageCaption',
-			'imageTextAlternative',
-			'|',
-			'linkImage'
+			'imageTextAlternative'
 		]
 	},
 	table: {
