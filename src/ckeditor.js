@@ -23,7 +23,6 @@ import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
-import MathType from '@wiris/mathtype-ckeditor5';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters';
@@ -59,7 +58,6 @@ ClassicEditor.builtinPlugins = [
 	Italic,
 	Link,
 	List,
-	MathType,
 	Paragraph,
 	PasteFromOffice,
 	SpecialCharacters,

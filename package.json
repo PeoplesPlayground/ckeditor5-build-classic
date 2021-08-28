@@ -46,8 +46,7 @@
 		"@ckeditor/ckeditor5-paste-from-office": "^26.0.0",
 		"@ckeditor/ckeditor5-special-characters": "^29.1.0",
 		"@ckeditor/ckeditor5-table": "^26.0.0",
-		"@ckeditor/ckeditor5-typing": "^26.0.0",
-		"@wiris/mathtype-ckeditor5": "^7.27.0"
+		"@ckeditor/ckeditor5-typing": "^26.0.0"
 	},
 	"devDependencies": {
 		"@ckeditor/ckeditor5-core": "^26.0.0",
