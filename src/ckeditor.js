@@ -87,7 +87,7 @@ ClassicEditor.defaultConfig = {
             'link',
             'bulletedList',
             'numberedList',
-			'specialCharacters',
+            'specialCharacters',
             '|',
             'insertTable',
             'insertImage',
