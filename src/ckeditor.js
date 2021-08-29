@@ -6,32 +6,33 @@
 // The editor creator to use.
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
-import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
-import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
-import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
-import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
-import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
-import Font from '@ckeditor/ckeditor5-font/src/font';
+import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
+import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
+import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
-import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
-import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
+import Table from '@ckeditor/ckeditor5-table/src/table';
+import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Font from "@ckeditor/ckeditor5-font/src/font";
+import ImageUpload from "@ckeditor/ckeditor5-image/src/imageupload";
+import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
+import ImageResize from "@ckeditor/ckeditor5-image/src/imageresize";
 import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters';
 import SpecialCharactersCurrency from '@ckeditor/ckeditor5-special-characters/src/specialcharacterscurrency';
 import SpecialCharactersMathematical from '@ckeditor/ckeditor5-special-characters/src/specialcharactersmathematical';
-import Table from '@ckeditor/ckeditor5-table/src/table';
-import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
-import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
-import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 import { CustomPlugin } from './customPlugin';
 
@@ -40,53 +41,59 @@ export default class ClassicEditor extends ClassicEditorBase {
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
-	Alignment,
-	Autoformat,
-	Bold,
-	CloudServices,
-	CustomPlugin,
-	EasyImage,
-	Essentials,
-	Font,
-	Heading,
-	Image,
-	ImageCaption,
-	ImageResize,
-	ImageStyle,
-	ImageToolbar,
-	ImageUpload,
-	Italic,
-	Link,
-	List,
-	Paragraph,
-	PasteFromOffice,
+    Essentials,
+    UploadAdapter,
+    Autoformat,
+    Bold,
+    Italic,
+    Underline,
+    CloudServices,
+    EasyImage,
+    ImageUpload,
+    Heading,
+    Image,
+    ImageCaption,
+    ImageStyle,
+    ImageToolbar,
+    Link,
+    List,
+    Paragraph,
+    PasteFromOffice,
+    CustomPlugin,
+    Table,
+    TableToolbar,
+    Font,
+    ImageResize,
+    Alignment,
 	SpecialCharacters,
 	SpecialCharactersCurrency,
 	SpecialCharactersMathematical,
-	Table,
-	TableToolbar,
-	Underline,
-	UploadAdapter
+	WordCount,
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
-			'insertTable',
-			'heading',
-			'|',
-			'bold',
-			'italic',
-			'underline',
-			'fontColor',
-			'fontBackgroundColor',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'insertImage',
-			'undo',
-			'redo'
+            'heading',
+            '|',
+            'bold',
+            'italic',
+            'underline',
+            'fontColor',
+            'fontBackgroundColor',
+            'alignment',
+            '|',
+            'link',
+            'bulletedList',
+            'numberedList',
+			'specialCharacters',
+            '|',
+            'insertTable',
+            'insertImage',
+            '|',
+            'undo',
+            'redo'
 		]
 	},
 	image: {
