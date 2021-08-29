@@ -65,10 +65,10 @@ ClassicEditor.builtinPlugins = [
     Font,
     ImageResize,
     Alignment,
-	SpecialCharacters,
-	SpecialCharactersCurrency,
-	SpecialCharactersMathematical,
-	WordCount,
+    SpecialCharacters,
+    SpecialCharactersCurrency,
+    SpecialCharactersMathematical,
+    WordCount,
 ];
 
 // Editor configuration.
