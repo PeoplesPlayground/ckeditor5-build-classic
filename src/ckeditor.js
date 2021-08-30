@@ -28,6 +28,11 @@ import Font from "@ckeditor/ckeditor5-font/src/font";
 import ImageUpload from "@ckeditor/ckeditor5-image/src/imageupload";
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 import ImageResize from "@ckeditor/ckeditor5-image/src/imageresize";
+import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters';
+import SpecialCharactersCurrency from '@ckeditor/ckeditor5-special-characters/src/specialcharacterscurrency';
+import SpecialCharactersMathematical from '@ckeditor/ckeditor5-special-characters/src/specialcharactersmathematical';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 import { CustomPlugin } from './customPlugin';
 
@@ -36,49 +41,59 @@ export default class ClassicEditor extends ClassicEditorBase {
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
-	Essentials,
-	UploadAdapter,
-	Autoformat,
-	Bold,
-	Italic,
-	Underline,
-	CloudServices,
-	EasyImage,
-	ImageUpload,
-	Heading,
-	Image,
-	ImageCaption,
-	ImageStyle,
-	ImageToolbar,
-	Link,
-	List,
-	Paragraph,
-	PasteFromOffice,
-	CustomPlugin,
-	Table,
-	TableToolbar,
-	Font,
-	ImageResize
+    Essentials,
+    UploadAdapter,
+    Autoformat,
+    Bold,
+    Italic,
+    Underline,
+    CloudServices,
+    EasyImage,
+    ImageUpload,
+    Heading,
+    Image,
+    ImageCaption,
+    ImageStyle,
+    ImageToolbar,
+    Link,
+    List,
+    Paragraph,
+    PasteFromOffice,
+    CustomPlugin,
+    Table,
+    TableToolbar,
+    Font,
+    ImageResize,
+    Alignment,
+    SpecialCharacters,
+    SpecialCharactersCurrency,
+    SpecialCharactersMathematical,
+    WordCount,
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
-			'insertTable',
-			'heading',
-			'|',
-			'bold',
-			'italic',
-			'underline',
-			'fontColor',
-			'fontBackgroundColor',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'insertImage',
-			'undo',
-			'redo'
+            'heading',
+            '|',
+            'bold',
+            'italic',
+            'underline',
+            'fontColor',
+            'fontBackgroundColor',
+            'alignment',
+            '|',
+            'link',
+            'bulletedList',
+            'numberedList',
+            'specialCharacters',
+            '|',
+            'insertTable',
+            'insertImage',
+            '|',
+            'undo',
+            'redo'
 		]
 	},
 	image: {
