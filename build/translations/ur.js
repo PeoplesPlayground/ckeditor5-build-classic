@@ -1,0 +1,1 @@
+!function(n){const o=n.ur=n.ur||{};o.dictionary=Object.assign(o.dictionary||{},{"Show source":"",Source:"مآخذ"}),o.getPluralForm=function(n){return 1!=n}}(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

@@ -35,6 +35,7 @@ import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 import { CustomPlugin } from './customPlugin';
+import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -73,6 +74,7 @@ ClassicEditor.builtinPlugins = [
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
+	plugins: [SourceEditing],
 	toolbar: {
 		items: [
             'heading',
@@ -93,7 +95,9 @@ ClassicEditor.defaultConfig = {
             'insertImage',
             '|',
             'undo',
-            'redo'
+            'redo',
+			'|',
+			'sourceEditing'
 		]
 	},
 	image: {
