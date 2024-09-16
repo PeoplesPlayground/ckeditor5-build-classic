@@ -66,6 +66,7 @@ ClassicEditor.builtinPlugins = [
     Font,
     ImageResize,
     Alignment,
+	SourceEditing,
     SpecialCharacters,
     SpecialCharactersCurrency,
     SpecialCharactersMathematical,
@@ -74,7 +75,6 @@ ClassicEditor.builtinPlugins = [
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
-	plugins: [SourceEditing],
 	toolbar: {
 		items: [
             'heading',
@@ -95,9 +95,7 @@ ClassicEditor.defaultConfig = {
             'insertImage',
             '|',
             'undo',
-            'redo',
-			'|',
-			'sourceEditing'
+            'redo'
 		]
 	},
 	image: {
