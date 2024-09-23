@@ -5,27 +5,19 @@ import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 export class CustomPlugin extends Plugin {
 
     init() {
+		const editor = this.editor;
         const editorShadow = document.getElementsByClassName('ckeditor-image-shadow')[0];
         let interval;
 
-        const setImgClass = (url, type) => {
-            const img = [...document.getElementsByTagName('img')].filter(img => img.src === url)[0];
-            img.classList.add(`direct-html__${type}`);
-        }
-
         const insertImg = (data, position) => {
-            this.editor.model.change(writer => {
-                const imageElement = writer.createElement('image', {
-                    src: data.img.url,
-                });
+			// Insert the image in the current selection location.
+			const imageUtils = editor.plugins.get( 'ImageUtils' );
+			const ret = imageUtils.insertImage({
+				src: data.img.url,
+				class: `direct-html__${data.type}`
+			}, position );
 
-                const ourSelection = writer.createSelection(position);
-
-                // Insert the image in the current selection location.
-                this.editor.model.insertContent(imageElement, ourSelection);
-
-                setTimeout(() => setImgClass(data.img.url, data.type), 300);
-            });
+			console.log('insertContent', ret);
         };
 
         const intervalFunction = (position) => {
@@ -35,9 +27,7 @@ export class CustomPlugin extends Plugin {
                 clearInterval(interval);
                 insertImg(JSON.parse(editorShadow.innerHTML), position);
             }
-        }
-
-        const editor = this.editor;
+        };
 
         editor.ui.componentFactory.add('insertImage', locale => {
             const view = new ButtonView(locale);
