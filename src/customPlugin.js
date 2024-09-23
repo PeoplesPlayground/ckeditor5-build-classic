@@ -10,14 +10,8 @@ export class CustomPlugin extends Plugin {
         let interval;
 
         const insertImg = (data, position) => {
-			// Insert the image in the current selection location.
 			const imageUtils = editor.plugins.get( 'ImageUtils' );
-			const ret = imageUtils.insertImage({
-				src: data.img.url,
-				class: `direct-html__${data.type}`
-			}, position );
-
-			console.log('insertContent', ret);
+			imageUtils.insertImage({src: data.img.url}, position);
         };
 
         const intervalFunction = (position) => {
