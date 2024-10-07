@@ -12,22 +12,21 @@ import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
-import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
+import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUtils from '@ckeditor/ckeditor5-image/src/imageutils';
 import Link from '@ckeditor/ckeditor5-link/src/link';
+import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Font from "@ckeditor/ckeditor5-font/src/font";
-import ImageUpload from "@ckeditor/ckeditor5-image/src/imageupload";
-import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 import ImageResize from "@ckeditor/ckeditor5-image/src/imageresize";
 import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters';
 import SpecialCharactersCurrency from '@ckeditor/ckeditor5-special-characters/src/specialcharacterscurrency';
@@ -37,6 +36,7 @@ import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 import { CustomPlugin } from './customPlugin';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
+
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -49,9 +49,7 @@ ClassicEditor.builtinPlugins = [
     Bold,
     Italic,
     Underline,
-    CloudServices,
-    EasyImage,
-    ImageUpload,
+	GeneralHtmlSupport,
     Heading,
     Image,
     ImageCaption,
@@ -59,6 +57,7 @@ ClassicEditor.builtinPlugins = [
     ImageToolbar,
 	ImageUtils,
     Link,
+	LinkImage,
     List,
     Paragraph,
     PasteFromOffice,
